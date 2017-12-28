@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- 数据库驱动包位置 -->
+    <classPathEntry
+        location="C:\Users\ondr\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar" />
+    <context id="context1">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!-- 数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/bookmarkets" userId="root"
+            password="password" />
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.boot.model"
+            targetProject="CyouBoot01/src/main/java" />
+        <!-- 生成的映射文件报名和位置 -->
+        <sqlMapGenerator targetPackage="com.boot.mapper"
+            targetProject="CyouBoot01/src/main/java" />
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator targetPackage="com.boot.mapper"
+            targetProject="CyouBoot01/src/main/java" type="XMLMAPPER" />
+        <!-- 要生成的那些表(更改tableName 和domainObjectName 就可以了) -->
+        <table  tableName="books" domainObjectName="Book"
+            enableCountByExample="true" enableUpdateByExample="true"
+            enableDeleteByExample="true" enableSelectByExample="true"
+            selectByExampleQueryId="true">
+            <columnOverride column="id" property="id" />
+            <columnOverride column="name" property="name" />
+            <columnOverride column="discription" property="discription" />
+            <columnOverride column="code" property="code" />
+            <columnOverride column="status" property="status" />
+            <columnOverride column="createdAt" property="createdAt" />
+            <columnOverride column="updatedAt" property="updatedAt" />
+            <columnOverride column="deletedAt" property="deletedAt" />
+        </table>
+        <table tableName="users" domainObjectName="User"
+            enableCountByExample="true" enableUpdateByExample="true"
+            enableDeleteByExample="true" enableSelectByExample="true"
+            selectByExampleQueryId="true">
+            <columnOverride column="id" property="id" />
+            <columnOverride column="name" property="name" />
+            <columnOverride column="loginName" property="loginName" />
+            <columnOverride column="password" property="password" />
+            <columnOverride column="createdAt" property="createdAt" />
+            <columnOverride column="updatedAt" property="updatedAt" />
+            <columnOverride column="deletedAt" property="deletedAt" />
+        </table>
+    </context>
+</generatorConfiguration>  

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+<title>WebJars Demo</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+</head>
+<body>
+	<!--         <div class="container"><br/>   -->
+	<!--             <div class="alert alert-success">   -->
+	<!--                 <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>   -->
+	<!--                 Hello, <strong>WebJars!</strong>   -->
+	<!--             </div>   -->
+	<div class="container">
+
+		<div class="alert alert-success">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+			Hello, <strong>WebJars!</strong>
+		</div>
+		<div class="row">
+			<p>排序前</p>
+			<div class="col-md-4 col-md-offset-4"
+				style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+				我在左边</div>
+			<!--         <div class="col-md-8" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> -->
+			<!--          我在右边 -->
+			<!--         </div> -->
+		</div>
+		<br></br>
+		<div class="row">
+			<p>排序后</p>
+			<div class="col-md-4 col-md-push-8"
+				style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+				我在左边</div>
+			<div class="col-md-8 col-md-pull-4"
+				style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+				我在右边</div>
+		</div>
+
+
+		<div class="row">
+			<h1>Table</h1>
+			<div class="col-md-4">
+				<table
+					class="table table-striped table-bordered table-hover table-condensed">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th class="warning">Firstname</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td class="info">Anna</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="success">Debbie</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="active">John</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="danger">John</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="table-responsive">
+				<table class="table">
+					<caption>响应式表格布局</caption>
+					<thead>
+						<tr>
+							<th>产品</th>
+							<th>付款日期</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>产品1</td>
+							<td>23/11/2013</td>
+							<td>待发货</td>
+						</tr>
+						<tr>
+							<td>产品2</td>
+							<td>10/11/2013</td>
+							<td>发货中</td>
+						</tr>
+						<tr>
+							<td>产品3</td>
+							<td>20/10/2013</td>
+							<td>待确认</td>
+						</tr>
+						<tr>
+							<td>产品4</td>
+							<td>20/10/2013</td>
+							<td>已退货</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">一个链接</a></li>
+            <li><a href="#">另一个链接 link</a></li>
+            <li><a href="#">其他功能</a></li>
+        </ul>
+    </div> 
+	</div>
+
+</body>
+</html>
